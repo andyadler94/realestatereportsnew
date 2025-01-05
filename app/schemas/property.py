@@ -85,4 +85,14 @@ class InquiryRequest(BaseModel):
 class InquiryResponse(BaseModel):
     status: str = Field(..., description="Status of the inquiry")
     message: str = Field(..., description="Response message")
-    inquiry_id: str = Field(..., description="Unique identifier for the inquiry") 
+    inquiry_id: str = Field(..., description="Unique identifier for the inquiry")
+
+class ReportRequest(BaseModel):
+    areas: List[SearchRequest] = Field(..., description="List of areas to search in")
+    viewer_name: str = Field(..., description="Name of the person the report is for")
+    max_properties: Optional[int] = Field(8, description="Maximum number of properties to include in report")
+
+class ReportResponse(BaseModel):
+    report_url: str = Field(..., description="URL or path to the generated report")
+    property_count: int = Field(..., description="Number of properties included in the report")
+    timestamp: str = Field(..., description="When the report was generated") 

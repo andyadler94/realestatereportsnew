@@ -16,6 +16,7 @@ A FastAPI application that generates detailed property reports using real estate
 - Mobile-responsive HTML reports
 - Clean and modern report design
 - Support for multiple search areas
+- RESTful API for automated report generation
 
 ## Installation
 
@@ -59,6 +60,52 @@ The script will:
 - Generate an HTML report with property details
 - Save the report with a timestamp in the filename
 
+## API Endpoints
+
+### Property Search
+- `GET /api/v1/properties/search`: Search for properties with filters
+  - Parameters:
+    - `city`: City name
+    - `state`: State code
+    - `min_beds`: Minimum number of bedrooms (optional)
+    - `min_baths`: Minimum number of bathrooms (optional)
+    - `max_price`: Maximum price (optional)
+    - `min_price`: Minimum price (optional)
+
+### Report Generation
+- `POST /api/v1/properties/generate-report`: Generate a property report
+  - Request Body:
+    ```json
+    {
+      "areas": [
+        {
+          "city": "Miami",
+          "state": "FL",
+          "min_beds": 2,
+          "min_baths": 2,
+          "max_price": 700000
+        },
+        {
+          "city": "Miami Beach",
+          "state": "FL",
+          "min_beds": 2,
+          "min_baths": 2,
+          "max_price": 700000
+        }
+      ],
+      "viewer_name": "John Smith",
+      "max_properties": 8
+    }
+    ```
+  - Response:
+    ```json
+    {
+      "report_url": "/reports/property_report_20250105_123456.html",
+      "property_count": 8,
+      "timestamp": "2025-01-05T12:34:56.789Z"
+    }
+    ```
+
 ## Project Structure
 
 ```
@@ -73,20 +120,10 @@ realestatereports/
 │   │   ├── property_service.py
 │   │   └── report_service.py
 │   └── main.py
+├── reports/           # Generated report files
 ├── requirements.txt
 └── test_search.py
 ```
-
-## API Endpoints
-
-- `GET /properties/search`: Search for properties with filters
-  - Parameters:
-    - `city`: City name
-    - `state`: State code
-    - `min_beds`: Minimum number of bedrooms
-    - `min_baths`: Minimum number of bathrooms
-    - `max_price`: Maximum price
-    - `min_price`: Minimum price (optional)
 
 ## Contributing
 
