@@ -21,7 +21,7 @@ A FastAPI application that generates detailed property reports using real estate
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/realestatereports.git
+git clone https://github.com/andyadler94/realestatereportsnew.git
 cd realestatereports
 ```
 
@@ -98,4 +98,4 @@ realestatereports/
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.
