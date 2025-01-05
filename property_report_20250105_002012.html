@@ -1,0 +1,415 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Property Listings Report</title>
+            
+            <style>
+                .report-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    font-family: system-ui, -apple-system, sans-serif;
+                }
+                .header {
+                    text-align: center;
+                    margin-bottom: 30px;
+                    color: #1a1a1a;
+                }
+                .attribution {
+                    font-size: 12px;
+                    color: #666;
+                    text-align: center;
+                    margin-top: -20px;
+                    margin-bottom: 20px;
+                }
+                .search-criteria {
+                    background-color: #f5f5f5;
+                    padding: 15px;
+                    border-radius: 8px;
+                    margin-bottom: 30px;
+                }
+                .property-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 30px;
+                    margin-bottom: 40px;
+                }
+                .property-card {
+                    border: 1px solid #e5e5e5;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    background-color: white;
+                    transition: transform 0.2s, box-shadow 0.2s;
+                }
+                .property-card:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                }
+                .image-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 4px;
+                    background-color: #f5f5f5;
+                }
+                .main-image {
+                    grid-column: 1 / -1;
+                    position: relative;
+                    padding-top: 66.67%;
+                    overflow: hidden;
+                }
+                .secondary-image {
+                    position: relative;
+                    padding-top: 66.67%;
+                    overflow: hidden;
+                }
+                .property-image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .property-details {
+                    padding: 20px;
+                }
+                .price {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: #1a1a1a;
+                    margin-bottom: 8px;
+                }
+                .address {
+                    color: #666;
+                    margin-bottom: 12px;
+                }
+                .specs {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 16px;
+                    color: #666;
+                    margin-bottom: 16px;
+                }
+                .specs span {
+                    white-space: nowrap;
+                }
+                .additional-details {
+                    font-size: 14px;
+                    color: #666;
+                    margin-bottom: 16px;
+                    line-height: 1.4;
+                }
+                .contact-text {
+                    font-size: 14px;
+                    color: #2563eb;
+                    text-align: center;
+                    font-weight: 500;
+                    margin-top: 16px;
+                }
+                @media (max-width: 768px) {
+                    .property-grid {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+        
+        </head>
+        <body>
+            <div class="report-container">
+                <div class="header">
+                    <h1>Property Report For John Smith</h1>
+                    <p>Generated on January 05, 2025</p>
+                </div>
+                <div class="attribution">
+                    This report has been created by Craig Harris
+                </div>
+
+                <div class="search-criteria">
+                    <h2>Search Criteria</h2>
+                    <p>Location: Bend, OR</p>
+                    <p>Price Range: $300,000 - $700,000</p>
+                    <p>Minimum: 3 bedrooms, 2 bathrooms</p>
+                </div>
+
+                <div class="property-grid">
+        
+                <div class="property-card">
+                    <div class="image-grid">
+                        <div class="main-image">
+                            <img class="property-image" src="http://ap.rdcpix.com/b40dcf72138c7e68a286dc8e9c40f6d4l-m3063048216od-w480_h360_x2.webp?w=1080&q=75" alt="Main view of 20070 SE Shady Pines Pl Bend OR 97702">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://ap.rdcpix.com/b40dcf72138c7e68a286dc8e9c40f6d4l-m3063048216od-w480_h360_x2.webp?w=1080&q=75" alt="Second view of 20070 SE Shady Pines Pl Bend OR 97702">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://ap.rdcpix.com/b40dcf72138c7e68a286dc8e9c40f6d4l-m716970247od-w480_h360_x2.webp?w=1080&q=75" alt="Third view of 20070 SE Shady Pines Pl Bend OR 97702">
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <div class="price">$524,900.00</div>
+                        <div class="address">20070 SE Shady Pines Pl Bend OR 97702</div>
+                        <div class="specs">
+                            <span>3 beds</span>
+                            <span>2.5 baths</span>
+                            <span>1,615 sqft</span>
+                            <span>$325/sqft</span>
+                        </div>
+                        <div class="additional-details">
+                            <div>• 1 day on market</div>
+                            <div>• Built in 2011</div>
+                            <div>• Lot size: 4,792 sqft</div>
+                            
+                            <div>• 2-story home</div>
+                            
+                            <div>• Area: Southeast Bend</div>
+                        </div>
+                        <div class="contact-text">Email me for details</div>
+                    </div>
+                </div>
+            
+                <div class="property-card">
+                    <div class="image-grid">
+                        <div class="main-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/373e2d0054be05761b3f532e5827c583l-f4104539078od-w480_h360_x2.webp?w=1080&q=75" alt="Main view of 20588 Button Brush Ave Bend OR 97702">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/373e2d0054be05761b3f532e5827c583l-f4104539078od-w480_h360_x2.webp?w=1080&q=75" alt="Second view of 20588 Button Brush Ave Bend OR 97702">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/373e2d0054be05761b3f532e5827c583f-f4047314170od-w480_h360_x2.webp?w=1080&q=75" alt="Third view of 20588 Button Brush Ave Bend OR 97702">
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <div class="price">$590,995.00</div>
+                        <div class="address">20588 Button Brush Ave Bend OR 97702</div>
+                        <div class="specs">
+                            <span>4 beds</span>
+                            <span>2.5 baths</span>
+                            <span>2,050 sqft</span>
+                            <span>$288/sqft</span>
+                        </div>
+                        <div class="additional-details">
+                            <div>• 2 days on market</div>
+                            
+                            
+                            
+                            <div>• 2-story home</div>
+                            <div>• 2-car garage</div>
+                            <div>• Area: Old Farm District</div>
+                        </div>
+                        <div class="contact-text">Email me for details</div>
+                    </div>
+                </div>
+            
+                <div class="property-card">
+                    <div class="image-grid">
+                        <div class="main-image">
+                            <img class="property-image" src="http://ap.rdcpix.com/71210b30b6645c50dfaa05c5f8f1507fl-m3142174515od-w480_h360_x2.webp?w=1080&q=75" alt="Main view of 63387 Lamoine Ln Bend OR 97701">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://ap.rdcpix.com/71210b30b6645c50dfaa05c5f8f1507fl-m3142174515od-w480_h360_x2.webp?w=1080&q=75" alt="Second view of 63387 Lamoine Ln Bend OR 97701">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://ap.rdcpix.com/71210b30b6645c50dfaa05c5f8f1507fl-m3872820982od-w480_h360_x2.webp?w=1080&q=75" alt="Third view of 63387 Lamoine Ln Bend OR 97701">
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <div class="price">$575,000.00</div>
+                        <div class="address">63387 Lamoine Ln Bend OR 97701</div>
+                        <div class="specs">
+                            <span>3 beds</span>
+                            <span>2.0 baths</span>
+                            <span>1,593 sqft</span>
+                            <span>$361/sqft</span>
+                        </div>
+                        <div class="additional-details">
+                            <div>• 2 days on market</div>
+                            <div>• Built in 2009</div>
+                            <div>• Lot size: 5,663 sqft</div>
+                            <div>• HOA: $30/month</div>
+                            <div>• 1-story home</div>
+                            
+                            <div>• Area: Boyd Acres, The Eastside</div>
+                        </div>
+                        <div class="contact-text">Email me for details</div>
+                    </div>
+                </div>
+            
+                <div class="property-card">
+                    <div class="image-grid">
+                        <div class="main-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/4a012c035603b80346125eacff011287l-f3500968205od-w480_h360_x2.webp?w=1080&q=75" alt="Main view of 21204 SE Pelee Dr Bend OR 97702">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/4a012c035603b80346125eacff011287l-f3500968205od-w480_h360_x2.webp?w=1080&q=75" alt="Second view of 21204 SE Pelee Dr Bend OR 97702">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/4a012c035603b80346125eacff011287l-f2671139651od-w480_h360_x2.webp?w=1080&q=75" alt="Third view of 21204 SE Pelee Dr Bend OR 97702">
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <div class="price">$619,995.00</div>
+                        <div class="address">21204 SE Pelee Dr Bend OR 97702</div>
+                        <div class="specs">
+                            <span>5 beds</span>
+                            <span>3.0 baths</span>
+                            <span>1,905 sqft</span>
+                            <span>$325/sqft</span>
+                        </div>
+                        <div class="additional-details">
+                            <div>• 3 days on market</div>
+                            
+                            
+                            
+                            <div>• 2-story home</div>
+                            <div>• 2-car garage</div>
+                            <div>• Area: <NA></div>
+                        </div>
+                        <div class="contact-text">Email me for details</div>
+                    </div>
+                </div>
+            
+                <div class="property-card">
+                    <div class="image-grid">
+                        <div class="main-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/ef353dd7a01fd599d398b6521f2b610al-f3888609299od-w480_h360_x2.webp?w=1080&q=75" alt="Main view of 20753 Mylongest Way Lot 42 Bend OR 97701">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/ef353dd7a01fd599d398b6521f2b610al-f3888609299od-w480_h360_x2.webp?w=1080&q=75" alt="Second view of 20753 Mylongest Way Lot 42 Bend OR 97701">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/ef353dd7a01fd599d398b6521f2b610af-f1504718883od-w480_h360_x2.webp?w=1080&q=75" alt="Third view of 20753 Mylongest Way Lot 42 Bend OR 97701">
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <div class="price">$345,057.00</div>
+                        <div class="address">20753 Mylongest Way Lot 42 Bend OR 97701</div>
+                        <div class="specs">
+                            <span>3 beds</span>
+                            <span>2.0 baths</span>
+                            <span>1,307 sqft</span>
+                            <span>$264/sqft</span>
+                        </div>
+                        <div class="additional-details">
+                            <div>• 2 days on market</div>
+                            
+                            
+                            
+                            <div>• 1-story home</div>
+                            <div>• 1-car garage</div>
+                            <div>• Area: Boyd Acres, The Eastside</div>
+                        </div>
+                        <div class="contact-text">Email me for details</div>
+                    </div>
+                </div>
+            
+                <div class="property-card">
+                    <div class="image-grid">
+                        <div class="main-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/420801d9ba0fa37c61b881d356f3c9dbl-f2095345695od-w480_h360_x2.webp?w=1080&q=75" alt="Main view of 21162 SE Golden Mkt Ln Bend OR 97702">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/420801d9ba0fa37c61b881d356f3c9dbl-f2095345695od-w480_h360_x2.webp?w=1080&q=75" alt="Second view of 21162 SE Golden Mkt Ln Bend OR 97702">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/420801d9ba0fa37c61b881d356f3c9dbt-f2184586647od-w480_h360_x2.webp?w=1080&q=75" alt="Third view of 21162 SE Golden Mkt Ln Bend OR 97702">
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <div class="price">$649,900.00</div>
+                        <div class="address">21162 SE Golden Mkt Ln Bend OR 97702</div>
+                        <div class="specs">
+                            <span>4 beds</span>
+                            <span>3.0 baths</span>
+                            <span>2,095 sqft</span>
+                            <span>$310/sqft</span>
+                        </div>
+                        <div class="additional-details">
+                            <div>• 2 days on market</div>
+                            
+                            
+                            
+                            <div>• 2-story home</div>
+                            <div>• 2-car garage</div>
+                            <div>• Area: The Eastside, Larkspur</div>
+                        </div>
+                        <div class="contact-text">Email me for details</div>
+                    </div>
+                </div>
+            
+                <div class="property-card">
+                    <div class="image-grid">
+                        <div class="main-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/f905d64b061c24c71e4203aae67e4b40l-f1420955871od-w480_h360_x2.webp?w=1080&q=75" alt="Main view of 2889 NE Wells Acres Rd Bend OR 97701">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/f905d64b061c24c71e4203aae67e4b40l-f1420955871od-w480_h360_x2.webp?w=1080&q=75" alt="Second view of 2889 NE Wells Acres Rd Bend OR 97701">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://nh.rdcpix.com/f905d64b061c24c71e4203aae67e4b40t-f3307074241od-w480_h360_x2.webp?w=1080&q=75" alt="Third view of 2889 NE Wells Acres Rd Bend OR 97701">
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <div class="price">$659,900.00</div>
+                        <div class="address">2889 NE Wells Acres Rd Bend OR 97701</div>
+                        <div class="specs">
+                            <span>3 beds</span>
+                            <span>2.0 baths</span>
+                            <span>1,892 sqft</span>
+                            <span>$349/sqft</span>
+                        </div>
+                        <div class="additional-details">
+                            <div>• 2 days on market</div>
+                            
+                            
+                            
+                            <div>• 1-story home</div>
+                            <div>• 2-car garage</div>
+                            <div>• Area: The Eastside, Mountain View</div>
+                        </div>
+                        <div class="contact-text">Email me for details</div>
+                    </div>
+                </div>
+            
+                <div class="property-card">
+                    <div class="image-grid">
+                        <div class="main-image">
+                            <img class="property-image" src="http://ap.rdcpix.com/6afbe87ad2f9303876f7a8f7b79a56cdl-m4153383810od-w480_h360_x2.webp?w=1080&q=75" alt="Main view of 20876 SE Denver Dr Bend OR 97702">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://ap.rdcpix.com/6afbe87ad2f9303876f7a8f7b79a56cdl-m4153383810od-w480_h360_x2.webp?w=1080&q=75" alt="Second view of 20876 SE Denver Dr Bend OR 97702">
+                        </div>
+                        <div class="secondary-image">
+                            <img class="property-image" src="http://ap.rdcpix.com/6afbe87ad2f9303876f7a8f7b79a56cdl-m351697373od-w480_h360_x2.webp?w=1080&q=75" alt="Third view of 20876 SE Denver Dr Bend OR 97702">
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <div class="price">$636,900.00</div>
+                        <div class="address">20876 SE Denver Dr Bend OR 97702</div>
+                        <div class="specs">
+                            <span>3 beds</span>
+                            <span>2.5 baths</span>
+                            <span>1,939 sqft</span>
+                            <span>$328/sqft</span>
+                        </div>
+                        <div class="additional-details">
+                            <div>• 3 days on market</div>
+                            <div>• Built in 2024</div>
+                            <div>• Lot size: 3,049 sqft</div>
+                            <div>• HOA: $132/month</div>
+                            <div>• 2-story home</div>
+                            
+                            <div>• Area: <NA></div>
+                        </div>
+                        <div class="contact-text">Email me for details</div>
+                    </div>
+                </div>
+            
+                </div>
+            </div>
+        </body>
+        </html>
+        
